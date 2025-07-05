@@ -20,7 +20,6 @@ body {
 	overflow: hidden;
 }
 
-
 p {
 	font-size: 1.3rem;
 }
@@ -86,7 +85,7 @@ section {
 	border-bottom-right-radius: 20px;
 }
 
-.message-content img {
+.message-content :is(img, video) {
 	border-radius: 20px;
 }
 
