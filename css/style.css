@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+::selection {
+	background-color: #5902a5; /* Цвет фона при выделении */
+	color: rgb(231, 231, 231); /* Цвет текста при выделении */
+}
+
 html,
 body {
 	background-color: #212121;
@@ -62,7 +67,7 @@ section {
 	max-width: 700px;
 }
 
-.message-text {
+.message-content {
 	background-color: #e8e8e832;
 	padding: 1rem;
 
@@ -74,8 +79,14 @@ section {
 
 	flex-direction: column;
 
+	gap: 10px;
+
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
+}
+
+.message-content img {
+	border-radius: 20px;
 }
 
 .message-title {
