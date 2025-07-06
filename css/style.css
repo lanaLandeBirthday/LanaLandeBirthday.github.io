@@ -20,6 +20,15 @@ body {
 	overflow: hidden;
 }
 
+img,
+video {
+	-webkit-tap-highlight-color: transparent; /* Safari, iOS */
+	tap-highlight-color: transparent; /* Стандартизированное имя */
+	outline: none;
+	user-select: none; /* Чтобы нельзя было выделять */
+	-webkit-user-drag: none; /* На всякий случай */
+}
+
 p {
 	font-size: 1.3rem;
 }
