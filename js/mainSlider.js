@@ -92,27 +92,43 @@ videos.forEach(el =>
 		}
 	})
 )
-// //
-//
 
-/////////////////////// love-img
-
+///////////////////////
 const logoImg = document.querySelector('.logo-img')
+let lastLogoNumber = 0
 
 const setRandomLogo = () => {
-	const randomNumber = Math.floor(Math.random() * 3 + 1)
+	let randomNumber
+	const maxLogos = 3
+
+	do {
+		randomNumber = Math.floor(Math.random() * maxLogos + 1)
+	} while (randomNumber === lastLogoNumber)
+
+	lastLogoNumber = randomNumber
+
 	logoImg.style.backgroundImage = `url('./images/logo${randomNumber}.png')`
 }
+
 setRandomLogo()
 
+// .....
+
 const loveImg = document.querySelector('.love-img')
+let lastLoveNumber = 0
 
 const setRandomLove = () => {
-	const randomNumber = Math.floor(Math.random() * 8 + 1)
+	let randomNumber
+	const maxLoveImages = 8
+
+	do {
+		randomNumber = Math.floor(Math.random() * maxLoveImages + 1)
+	} while (randomNumber === lastLoveNumber)
+
+	lastLoveNumber = randomNumber
+
 	loveImg.style.backgroundImage = `url('./love/${randomNumber}.jpg')`
 }
-
-// setRandomLove()
 
 const mainSlider = new Swiper('.slider-main', {
 	direction: 'vertical',
