@@ -1,6 +1,14 @@
-const imgs = document.querySelectorAll('img')
+const arrowDown = document.querySelector('.icon-wrapper')
 
-const videos = document.querySelectorAll('video')
+// Добавляем обработчик клика
+arrowDown.addEventListener('click', () => {
+	mainSlider.slideTo(2, 800)
+})
+
+// .....
+const imgs = document.querySelectorAll('.content-img')
+
+const videos = document.querySelectorAll('.content-video')
 
 imgs.forEach(el =>
 	el.addEventListener('click', () => {
@@ -55,7 +63,7 @@ videos.forEach(el =>
 
 		if (!el.classList.contains('active')) {
 			el.removeAttribute('muted')
-			el.currentTime = 0 
+			el.currentTime = 0
 			el.muted = false
 
 			el.play().catch(err => {
@@ -85,22 +93,26 @@ videos.forEach(el =>
 	})
 )
 // //
-const logoImgs = document.querySelectorAll('.slider__img')
+//
+
+/////////////////////// love-img
+
+const logoImg = document.querySelector('.logo-img')
 
 const setRandomLogo = () => {
 	const randomNumber = Math.floor(Math.random() * 3 + 1)
-	logoImgs.forEach(logo => {
-		logo.style.backgroundImage = `url('./images/logo${randomNumber}.png')`
-	})
+	logoImg.style.backgroundImage = `url('./images/logo${randomNumber}.png')`
+}
+setRandomLogo()
+
+const loveImg = document.querySelector('.love-img')
+
+const setRandomLove = () => {
+	const randomNumber = Math.floor(Math.random() * 8 + 1)
+	loveImg.style.backgroundImage = `url('./love/${randomNumber}.jpg')`
 }
 
-// const logoImg = document.querySelector('.slider__img')
-
-// const setRandomLogo = () => {
-// 	const randomNumber = Math.floor(Math.random() * 3 + 1)
-// 	logoImg.style.backgroundImage = `url('./images/logo${randomNumber}.png')`
-// }
-setRandomLogo()
+// setRandomLove()
 
 const mainSlider = new Swiper('.slider-main', {
 	direction: 'vertical',
@@ -128,6 +140,7 @@ mainSlider.on('slideChange', function () {
 		// Эта часть осталась от вашего кода, она меняет логотип на первом слайде
 		// после перехода на второй.
 		setTimeout(setRandomLogo, 1000)
+		setTimeout(setRandomLove, 1000)
 	} else {
 		// Мы находимся на первом или третьем слайде.
 		// Убедимся, что все разблокировано для возврата на центральный слайд.
