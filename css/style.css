@@ -130,14 +130,14 @@ section {
 	flex-direction: column;
 
 	width: 95%;
-	max-width: 700px;
+	max-width: 500px;
 
 	border-radius: 20px;
 }
 
 .message-wrapper {
 	width: 95%;
-	max-width: 700px;
+	max-width: 500px;
 }
 
 .message-content {
@@ -238,4 +238,24 @@ section {
 	background-position: center;
 
 	background-color: #f4e6c5;
+}
+
+
+
+
+/*  */
+
+.my-wrapper{
+	border-radius: 20px;
+	background-color: #212121;
+
+	padding: 2rem;
+	padding-inline: 2rem;
+
+	width: 100%;
+
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
