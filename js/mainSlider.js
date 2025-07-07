@@ -1,3 +1,5 @@
+
+/////////
 const arrowDown = document.querySelector('.icon-wrapper')
 
 // Добавляем обработчик клика
@@ -107,7 +109,7 @@ const setRandomLogo = () => {
 
 	lastLogoNumber = randomNumber
 
-	logoImg.style.backgroundImage = `url('./images/logo${randomNumber}.png')`
+	logoImg.style.backgroundImage = `url('./images/logo${randomNumber}.jpg')`
 }
 
 setRandomLogo()
